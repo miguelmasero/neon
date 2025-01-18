@@ -157,7 +157,7 @@ UPSTASH_REDIS_TOKEN=
 AUTH_SECRET=
 
 # Required for workflow
-QSTASH_URL=
+QSTASH_URL=https://qstash.upstash.io
 QSTASH_TOKEN=
 
 # RESEND_TOKEN=
