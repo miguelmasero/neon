@@ -95,27 +95,15 @@ const AuthForm = <T extends FieldValues>({
                   <FormLabel className="capitalize">
                     {FIELD_NAMES[field.name as keyof typeof FIELD_NAMES]}
                   </FormLabel>
-                  <FormControl>
-                    {field.name === "universityCard" ? (
-                      <FileUpload
-                        type="image"
-                        accept="image/*"
-                        placeholder="Upload your ID"
-                        folder="ids"
-                        variant="dark"
-                        onFileChange={field.onChange}
-                      />
-                    ) : (
-                      <Input
-                        required
-                        type={
-                          FIELD_TYPES[field.name as keyof typeof FIELD_TYPES]
+
+                  <Input
+                    type={
+                      FIELD_TYPES[field.name as keyof typeof FIELD_TYPES]
                         }
                         {...field}
                         className="form-input"
-                      />
-                    )}
-                  </FormControl>
+                  />
+  
                   <FormMessage />
                 </FormItem>
               )}
