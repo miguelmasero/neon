@@ -1,9 +1,15 @@
+import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import { signOut } from "@/auth";
 import { Button } from "@/components/ui/button";
+import { Session } from "@/auth";
 
-const Header = () => {
+interface HeaderProps {
+  session: Session;
+}
+
+const Header: React.FC<HeaderProps> = ({ session }) => {
   return (
     <header className="my-10 flex justify-between gap-5">
       <Link href="/">

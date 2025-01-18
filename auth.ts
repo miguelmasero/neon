@@ -5,6 +5,15 @@ import { db } from "@/database/drizzle";
 import { users } from "@/database/schema";
 import { eq } from "drizzle-orm";
 
+export type Session = {
+  user?: {
+    id: string;
+    name: string;
+    email: string;
+  };
+  // Add other session properties as needed
+};
+
 export const { handlers, signIn, signOut, auth } = NextAuth({
   session: {
     strategy: "jwt",
