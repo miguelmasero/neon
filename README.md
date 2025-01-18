@@ -130,7 +130,7 @@ cd university-library-jsm
 ```
 
 **Installation**
-
+```
 Install the project dependencies using npm:
 
 ```bash
